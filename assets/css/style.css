@@ -41,11 +41,10 @@ html {
 }
 
 
-.quiz-intro {
+.quiz-intro-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 

@@ -13,7 +13,7 @@
 <body>
 
     <div class="quiz-body">
-        <div class="quiz-intro">
+        <div class="quiz-intro hide">
 
             <h2 id="intro-title">Welcome to the Gaming Quiz</h2>
             <p id="intro-text"2>Please enter your username so we can proceed with starting the Quiz</p>
@@ -22,18 +22,29 @@
             <button id="start-button">Start</button>
 
         </div>
+
+        <div id="quiz-container" class="hide">
+
+            <div id="quiz-questions">Question</div>
+
+            <div id="answer-buttons">
+                <button class="quiz-button">1</button>
+                <button class="quiz-button">2</button>
+                <button class="quiz-button">3</button>
+                <button class="quiz-button">4</button>
+            </div>  
+              
+        </div>
+
+        <div class="score-area">
+            <p class="scores">Points: <span class="id">0</span>/12</p>
+        </div>
+
     </div>
 
-    <div class="question-area">
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-    </div>
 
-    <div class="score-area">
-        <p class="scores">Points: <span class="id">0</span>/12</p>
-    </div>
+
+
 
     <script src="assets/js/script.js"></script>
 </body>

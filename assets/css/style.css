@@ -40,7 +40,6 @@ html {
     height: 600px;
     padding: 10px;
     border-radius: 30px;
-
 }
 
 
@@ -115,16 +114,13 @@ html {
 }
 
 .button-grid {
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin: 40px 0;
 }
 
 .quiz-button {
-    /* margin: 15px 60px; */
     margin: 0 60px;
     margin-top: 25px;
     width: 40%;
@@ -189,7 +185,6 @@ html {
 #ending {
     font-size: 200%;
     text-align: center;
-
 }
 
 #thanks {

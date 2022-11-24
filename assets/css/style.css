@@ -199,7 +199,7 @@ html {
 }
 
 .end-score {
-    margin-bottom: 30%;
+    margin-bottom: 20%;
 }
 
 /*** Media Queries for Responsive Design on different resolutions ***/
@@ -229,5 +229,9 @@ html {
     #player-name {
         font-size: 100%;
         width: 60%;
+    }
+
+    .end-score {
+        margin-bottom: 40%;
     }
 }

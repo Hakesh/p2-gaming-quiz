@@ -1,108 +1,190 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Gaming Quiz
 
-Welcome Hakesh,
+Sherpa Finder is a fictional website targeting both new and existing players in the video game Destiny who want help getting into and learning Raid content in the game. The website gives information about what we do, why we do it, how we help and a sign up form to let the players interested in getting our help reach out and sign up to our Sherpa Raids.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+It's one single scrollable website that has been designed to be responsive and usable on a wide range of devices and resolutions.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[Gaming Quiz - Live Link](https://hakesh.github.io/p2-gaming-quiz/) (Right click to open in a new tab)
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![Image of Gaming Quiz on a wide range of devices](assets/docs/am-i-responsive-image.png)
 
 ---
 
-Happy coding!
+## CONTENTS
+
+* [Features](#features)
+  * [Navigation Bar](#navigation-bar)
+  * [Landing Page Image](#landing-page-image)
+  * [About Us](#about-us)
+  * [How We Help](#how-we-help)
+  * [Sign Up](#sign-up)
+  * [Footer](#footer)
+  * [Future Implementations](#future-implementations)
+  * [Accessibility](#accessibility)
+
+* [Typography](#typography)
+
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+
+* [Deployment](#deployment)
+
+* [Testing](#testing)
+
+* [Credits](#credits)
+
+---
+
+## Features
+
+### Landing Page
+  - Featured at the top of the page, it's fully responsive on all resolutions and links to the Logo, Home Page, 'About Us' section, 'How We Help' section and to the Sign Up form.
+  - The Navigation Bar will help the user to find whichever section they are looking for across all screen resolutions and devices.
+
+![Image of the Navigation Bar on Sherpa Finder](assets/docs/nav-bar-image.png)
+
+### Quiz Game
+  - The Landing Page introduces the users to Sherpa Finder with a beautiful image of Guardians (what players are called in-game) standing together in unity as a team.
+
+![Image of the Landing Page image on Sherpa Finder](assets/docs/landing-page-image.jpg)
+
+### Final Score
+  - The 'About Us' section gives an introduction to what sherpa means if they are not famililar with the term and how it translates into Destiny, and what sherpas usually do in the game.
+  - It also describes why we exist, why we are needed and should encourage the users to contact us if they find them self in the situations that are mentioned.
+
+![Image of the 'About Us' section Sherpa Finder](assets/docs/about-us-image.jpg)
+
+### How We Help
+  - Gives the users a clear idea what we offer to them with our service and how to get it.
+  - Encourage the user to join our communities or various social platforms to either get help from us or meet people in similar situations as them, and give them a place to connect.
+
+![Image of the 'How We Help' section Sherpa Finder](assets/docs/how-we-help-image.png)
+
+### Sign Up
+  - This section allows the user to get involved and sign up to get help and join our Sherpas in getting to know, learning and doing the raids in a safe environment.
+  - The user will be able to specify which type of day suits them the best, and let us know which raid or raids they are interested in doing with us.
+
+![Image of the Sign Up Form on Sherpa Finder](assets/docs/signup-form-image.jpg)
+
+### Footer
+  - Has social media icons with relevant links re-directing users to our social media platforms and encourages them to interact with us.
+
+![Image of the Footer on Sherpa Finder](assets/docs/footer-image.png)
+
+
+### Future Implementations
+
+- Making the countdown actually count down on the page after the final question has been answered.
+- A more advanced scoring system.
+- Make it more obvious when you select the right or wrong answer, whether it be some minor animation or sound effect.
+
+
+### Accessibility
+
+I've tried to make the website as accessible as possible where I could by:
+
+- Using semantic HTML.
+- Colors that are easy on the eye at any time of day.
+
+
+## Typography
+
+Google Fonts was used for these fonts:
+
+- **Rajdhani** for all website headings.
+
+![Image of the Rajdhani font](assets/docs/rajdhani-font.png)
+
+- **Antic** for all website body text / paragraphs and the navigation bar.
+
+![Image of the Antic font](assets/docs/antic-font.png)
+
+
+## Technologies Used
+
+### Languages Used
+
+HTML, CSS and JS was used when making this website.
+
+### Frameworks, Libraries & Programs Used
+
+- Git - For version control.
+
+- GitHub - To save and store the files.
+
+- Google Fonts - To find and import fonts used for the website.
+
+- Microsoft Edge Developer Tools - To troubleshoot, test features see and solve responsiveness, also to try get an understand why or how things were working, especially logging things to the console to see if things are doing or working the way they should.
+
+- [Am I Responsive](https://ui.dev/amiresponsive) - To show the website on a wide range of devices.
+
+
+## Deployment
+
+Github Pages was used to deploy the website. The instructions to do this can be found below:
+
+1. Log in or sign up to Github.
+2. Find the repository for this project, [p1-sherpa-finder](https://github.com/Hakesh/p1-sherpa-finder).
+3. Click on the "Settings" button in the menu bar for the repository.
+4. Click on Pages in the left hand side navigation bar.
+5. From the Source dropdown menu, select "Deploy from a branch".
+6. From the Branch dropdown menus, select "main" and "/root" respectively.
+7. Click Save. Your live Github Pages site is now deployed at the URL shown at the top of the page. **Keep in mind it might take a bit before the page is deployed and a URL is shown, you might have to refresh the page after a few minutes to get it to show.**
+
+The live link can be found here - https://hakesh.github.io/p2-gaming-quiz/
+
+## Testing
+
+This website was developed using Microsft Edge with the use of Microsoft Edge Dev Tools, which have been used since the very beginning to troubleshoot this website for any problems that arose and to make sure the website was responsive on many different resolutions and devices. 
+
+The website has also been tested in Google Chrome and it works as expected.
+
+My biggest hurdle was getting the name requirement to work without a form, it took a fair bit of trial and error and researching to get it to work in an okay way. I wanted to get/make a similar warning/alert that you get as if you were using the "required" attribute in a form, however not enough time was available to research this option.
+
+The lighthouse score is good but not perfect. In the future I will look to try to use the .webp image format instead for better performance.
+
+### Validator Testing
+
+- HTML
+  - No errors were returned when passing through the official [W3C Validator.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhakesh.github.io%2Fp1-sherpa-finder%2Findex.html)
+
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) Validator.](https://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fhakesh.github.io%2Fp1-sherpa-finder%2Findex.html&usermedium=all&vextwarning=&warning=1)
+
+- JS
+  - No errors were returned when passing through the official [W3C Validator.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhakesh.github.io%2Fp1-sherpa-finder%2Findex.html)
+
+
+### Lighthouse Testing
+
+![Image of Sherpa Finder Lighthouse Score](assets/docs/lighthouse-score-image.png)
+
+### Unfixed Bugs
+
+- If you spam click the correct answer you are able to get an unlimited amount of points/score.
+
+
+## Credits
+
+- [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
+  - Another one of his videos coming to my rescue. Wouldn't have been able to finish this project in time if it wasn't for him. A large amount of JS code is credited to him as the quiz game is based on his own, with other features implemented by me (score count, end screen, name requirement, etc). 
+  I only had 1.5-2 days of time on this project and wasn't able to figure out a solution by myself.
+
+- [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+  - My repository was created using the GitPod template given by Code Institute.
+
+- [Stackoverflow](https://stackoverflow.com/questions/1191865/code-for-a-simple-javascript-countdown-timer)
+  - Wasn't sure how to make a countdown timer and found this amazingly simple snippet from Ali in the thread linked that worked flawlessly. Just wish I was able to implement the actual countdown onto a text, but I wasnt able to get it to work in time.
+
+- [W3schools](https://www.w3schools.com/)
+  - No specific code snippet was used from them but they are an incredible resource for learning/helping/remembring that I will always feel a need to include them here as their explanations and examples have incredible value.
+
+- [Blizzard](https://blizzard.gamespress.com/Wrath-of-the-Lich-King-Classic-Reveal)
+  - For providing excellent images in their press-kit. This is where my stunning background image is coming from.
+
+- [Google Fonts](https://fonts.google.com/)
+  - Used for finding and using the fonts 'Antic' and 'Rajdhani'.
+
+- Love Math Project
+  - Some inspiration and learning from this project was carried over to this one.

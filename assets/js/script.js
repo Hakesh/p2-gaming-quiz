@@ -12,12 +12,30 @@ const quizButtonsElement = document.getElementById("answer-buttons");
 let playerName = document.getElementById("player-name");
 let shuffledQuestions, currentQuestionIndex;
 
-startButton.addEventListener("click", runGame);
+// startButton.addEventListener("click", runGame);
+startButton.addEventListener("click", function() {
+
+    let username = document.getElementById("player-name");
+    let valid = username.checkValidity();
+    if (valid) {
+        runGame();
+        console.log(valid);
+    }
+    else {
+        // alert("Invalid Username");
+        let usernameError = document.getElementById("player-name");
+        usernameError.setAttribute("placeholder", "Minimum: 3 Characters")
+        username.classList.add("username-error")
+        username.value = "";
+        console.log(valid);
+    }
+});
 resetButton.addEventListener("click", resetGame);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     nextQuestion();
 })
+
 
 function runGame() {
     resetScore();
@@ -115,7 +133,6 @@ function incrementScore() {
 }
 
 function resetScore() {
-    let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = "0";
 }
 

@@ -142,6 +142,21 @@ html {
 }
 
 
+/*** User Info | Username and SCore ***/
+
+#username {
+    text-transform: capitalize;
+}
+
+.username-error::placeholder {
+    color: red;
+}
+
+.scores {
+
+}
+
+
 /*** Media Queries for Responsive Design on different resolutions ***/
 
 @media screen and (max-width: 1024px) {

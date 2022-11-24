@@ -11,8 +11,10 @@
     <title>Gaming Quiz</title>
 </head>
 <body>
-
+    <!-- The overall body of the Quiz game -->
     <div class="quiz-body">
+
+        <!-- The Quiz introduction with name input and start button -->
         <div id="quiz-intro" class="quiz-intro-page">
     
             <h2 id="intro-title">Welcome to the Gaming Quiz</h2>
@@ -22,10 +24,12 @@
     
         </div>
 
+        <!-- The container for quiz questions and answer buttons -->
         <div id="quiz-container" class="hide">
 
             <div id="quiz-questions">Question</div>
 
+            <!-- Quiz Buttons with the answers -->
             <div id="answer-buttons" class="button-grid">
                 <button class="quiz-button">1</button>
                 <button class="quiz-button">2</button>
@@ -35,19 +39,22 @@
 
         </div>
 
+        <!-- User Informaton -->
         <div id="user-info" class="hide">
             <p id="username">Username</p>
             <p class="scores">Score: <span id="score">0</span>/10</p>
         
         </div>
 
+        <!-- Ending with final score -->
         <div id="ending" class="hide">
             <p id="thanks">Thanks for playing!</p>
             <p class="end-score">Your score: <span id="final-score">0</span>/10</p>
         </div>
 
-        <p id="failed-timer" class="hide">End Screen in 5s...</p>
+        <p id="failed-timer" class="hide">Score Screen in 5s...</p>
 
+        <!-- Control Buttons -->
         <div class="controls">
             <button id="start-button" class="control-buttons">Start</button>
             <button id="next-button" class="control-buttons hide">Next</button>

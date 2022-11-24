@@ -15,7 +15,7 @@ let shuffledQuestions, currentQuestionIndex;
 
 /**
  * Function that verifies that player name is at least 3 characters long
- * and gives red error message in the place holder text
+ * and gives red error message in the placeholder text
  */
 startButton.addEventListener("click", function() {
 
@@ -26,17 +26,17 @@ startButton.addEventListener("click", function() {
     }
     else {
         let usernameError = document.getElementById("player-name");
-        usernameError.setAttribute("placeholder", "Minimum: 3 Characters")
-        username.classList.add("username-error")
+        usernameError.setAttribute("placeholder", "Minimum: 3 Characters");
+        username.classList.add("username-error");
         username.value = "";
     }
 });
 
+resetButton.addEventListener("click", resetGame);
 
 /**
- * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
  */
-resetButton.addEventListener("click", resetGame);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     nextQuestion();
@@ -44,7 +44,9 @@ nextButton.addEventListener("click", () => {
 
 
 /**
+ * Starts the game and changes the UI elements, also resets the score for every time you play. Sorts the questions order randomly
  * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
  */
 function runGame() {
     resetScore();
@@ -62,7 +64,9 @@ function runGame() {
 
 
 /**
+ * Removes the wrong/correct classes from the answer buttons and then removes them, also hiding the "next" button.
  * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
  */
 function resetState() {
     clearStatusClass(document.body);
@@ -74,7 +78,9 @@ function resetState() {
 
 
 /**
+ * Prepares the next question
  * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
  */
 function nextQuestion() {
     resetState();
@@ -84,7 +90,10 @@ function nextQuestion() {
 
 
 /**
+ * This function creates new buttons with the quiz-button class
+ * and feeds them with the different answers for the question
  * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
  */
 function showQuestion(question) {
     questionElement.innerText = question.question;
@@ -102,6 +111,14 @@ function showQuestion(question) {
 
 }
 
+
+
+/**
+ * This function checks if the right button was clicked, increases the score, checks how many questions
+ * are left and ends the quiz.
+ * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
+ */
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct;
@@ -115,16 +132,18 @@ function selectAnswer(e) {
     }
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        console.log("Check question length");
         nextButton.classList.remove("hide");
     }
     else {
-        console.log("ran out of questions");
         endScreen();
     }
 }
 
-
+/**
+ * Sets the correct and wrong classes on the appropiate button elements
+ * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
+ */
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
@@ -135,22 +154,31 @@ function setStatusClass(element, correct) {
     }
 }
 
-
+/**
+ * Clears the correct/wrong status and colors from the answer boxes
+ * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
+ */
 function clearStatusClass(element) {
     element.classList.remove("correct");
     element.classList.remove("wrong");
 
 }
 
-//Collects and counts the score from answering the quiz questions correctly
+/**
+ * Collects and counts the score from answering the quiz questions correctly
+ * 
+ * Credit: Taken from Love Math Project
+ */ 
 function incrementScore() {
-
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
 
 }
 
-// Resets the score counter
+/**
+ * Resets the score counter
+ */
 function resetScore() {
     document.getElementById("score").innerText = "0";
 }
@@ -166,10 +194,13 @@ function resetGame() {
     ending.classList.add("hide");
 }
 
-
+/**
+ * Starts a 5s countdown and once its finished, changes the UI Elements to represent the ending scene/final score scene. 
+ * Brings up a reset button for players to reset the game and score to play again.
+ * 
+ * Credit for countdown code: Ali @ https://stackoverflow.com/questions/1191865/code-for-a-simple-javascript-countdown-timer
+ */
 function endScreen() {
-
-    // Credit for countdown code: Ali in https://stackoverflow.com/questions/1191865/code-for-a-simple-javascript-countdown-timer
     let count = 5;
     let counter = setInterval(timer, 1000);
     userInfo.classList.add("hide");
@@ -192,14 +223,17 @@ function endScreen() {
     }
 
 }
-
-// The constant array holding all of the questions and answers
+/**
+ * The const array holding all of the questions and answers
+ * 
+ * Credit: Web Dev Simplified @ https://www.youtube.com/watch?v=riDzcEQbX6k
+ */
 const questions = [
     {
         question: "Which MMORPG boasted a massive 12 million players during the years 2009-2010?",
         answers: [
             { text: "Runescape", correct: false },
-            { text: "Star Wars: The Old Republic", correct: false },
+            { text: "SW:TOR", correct: false },
             { text: "World of Warcraft", correct: true },
             { text: "Guild Wars", correct: false }
         ]

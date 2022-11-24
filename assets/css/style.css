@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Red+Hat+Display:wght@600&display=swap');
 
 
-/*** Main HTML ***/
+/*** General HTML ***/
 * {
     padding: 0;
     margin: 0;
@@ -18,7 +18,8 @@ h1, h2, h3 {
     font-family: 'Red Hat Display', sans-serif;
 }
 
-
+/*** Background Img ***/
+/* Source: https://blizzard.gamespress.com/Wrath-of-the-Lich-King-Classic-Reveal */
 html {
     background: url(../images/Lich_King_Key_Art-compressed.webp) no-repeat center center / cover fixed;
 }
@@ -50,12 +51,14 @@ html {
 
 
 #intro-title {
+    width: 80%;
     margin-top: 80px;
     font-size: 180%;
 }
 
 
 #intro-text {
+    width: 80%;
     margin-top: 90px;
     margin-bottom: 20px;;
     font-size: 125%;
@@ -74,11 +77,9 @@ html {
     font-size: 120%;
 }
 
-
+/*** CSS for all control buttons ***/
 .control-buttons {
-    /* position: absolute;
-    bottom: 0; */
-    margin-bottom: 80px;
+    margin-bottom: 70px;
 
     background-color: rgb(33, 108, 138);
     color: white;
@@ -113,8 +114,6 @@ html {
 }
 
 .button-grid {
-    /* display: grid;
-    grid-template-columns: repeat(2, auto); */
 
     display: flex;
     flex-direction: column;
@@ -124,7 +123,9 @@ html {
 }
 
 .quiz-button {
-    margin: 15px 60px;
+    /* margin: 15px 60px; */
+    margin: 0 60px;
+    margin-top: 25px;
     width: 40%;
     height: 45px;
 
@@ -152,9 +153,19 @@ html {
 
 /*** User Info | Username, Score, Timer & Ending/End Screen***/
 
+#user-info {
+    position: relative;
+    bottom: 3%;
+}
+
+
 #username {
     text-transform: capitalize;
-    font-size: 120%;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-size: 130%;
+
+    margin-bottom: 5px;
 }
 
 .username-error::placeholder {
@@ -162,10 +173,10 @@ html {
 }
 
 .scores {
-    font-size: 130%;
+    font-size: 140%;
 }
 
-/*** Sadly didn't manage to get the countdown to display it in real time :< ***/
+/*** Sadly didn't manage to get the countdown to display it in real time :( ***/
 #failed-timer {
     text-align: center;
     font-size: 140%;
@@ -208,5 +219,14 @@ html {
     .quiz-button {
         margin: 7px 30px;
         height: 45px;
+    }
+
+    #quiz-questions {
+        font-size: 120%;
+    }
+
+    #player-name {
+        font-size: 100%;
+        width: 60%;
     }
 }

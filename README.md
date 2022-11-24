@@ -1,8 +1,8 @@
 # Gaming Quiz
 
-Sherpa Finder is a fictional website targeting both new and existing players in the video game Destiny who want help getting into and learning Raid content in the game. The website gives information about what we do, why we do it, how we help and a sign up form to let the players interested in getting our help reach out and sign up to our Sherpa Raids.
+Gaming Quiz is a quick tool to help test users general gaming knowledge regarding certain brands, developers, publishers, games and the likes!
 
-It's one single scrollable website that has been designed to be responsive and usable on a wide range of devices and resolutions.
+Users playing this game will get to test their knowledge while admiring the breath taking background image. It's a single webpage with an interactive window used for the quiz game.
 
 [Gaming Quiz - Live Link](https://hakesh.github.io/p2-gaming-quiz/) (Right click to open in a new tab)
 
@@ -13,16 +13,11 @@ It's one single scrollable website that has been designed to be responsive and u
 ## CONTENTS
 
 * [Features](#features)
-  * [Navigation Bar](#navigation-bar)
-  * [Landing Page Image](#landing-page-image)
-  * [About Us](#about-us)
-  * [How We Help](#how-we-help)
-  * [Sign Up](#sign-up)
-  * [Footer](#footer)
+  * [Landing Page](#landing-page)
+  * [Quiz Game](#quiz-game)
+  * [Final Score](#final-score)
   * [Future Implementations](#future-implementations)
   * [Accessibility](#accessibility)
-
-* [Typography](#typography)
 
 * [Technologies Used](#technologies-used)
   * [Languages Used](#languages-used)
@@ -39,43 +34,25 @@ It's one single scrollable website that has been designed to be responsive and u
 ## Features
 
 ### Landing Page
-  - Featured at the top of the page, it's fully responsive on all resolutions and links to the Logo, Home Page, 'About Us' section, 'How We Help' section and to the Sign Up form.
-  - The Navigation Bar will help the user to find whichever section they are looking for across all screen resolutions and devices.
+  - Features an incredible image of a famous 'World of Warcraft' villain, Arthas, The Lich King as the webpages background images that the users can admire as they play the quiz.
+  - The easy and straight forward approach to the game will get them started quickly, and if they choose too short a name (or none at all) they will get clear instructions on what to do.
 
-![Image of the Navigation Bar on Sherpa Finder](assets/docs/nav-bar-image.png)
+![Image of the Landing Page on Gaming Quiz](assets/docs/landing-page-image.jpg)
 
 ### Quiz Game
-  - The Landing Page introduces the users to Sherpa Finder with a beautiful image of Guardians (what players are called in-game) standing together in unity as a team.
+  - The quiz game has an easy on the eyes structure with the question at the top with 4 buttons as options to choose from, with their username and score count below the buttons. After the user presses one of the buttons it will either change color to red or green to indicated if its right or wrong, and a "next" button will appear below the score counter to progress to the next question.
 
-![Image of the Landing Page image on Sherpa Finder](assets/docs/landing-page-image.jpg)
+![Image of the game on Gaming Quiz](assets/docs/quiz-game-image.jpg)
 
 ### Final Score
-  - The 'About Us' section gives an introduction to what sherpa means if they are not famililar with the term and how it translates into Destiny, and what sherpas usually do in the game.
-  - It also describes why we exist, why we are needed and should encourage the users to contact us if they find them self in the situations that are mentioned.
+  - A very basic scene with the users total score count from doing the quiz, and a thank you message for playing the game. Also a "reset" button to reset the game and start over from the beginning.
 
-![Image of the 'About Us' section Sherpa Finder](assets/docs/about-us-image.jpg)
-
-### How We Help
-  - Gives the users a clear idea what we offer to them with our service and how to get it.
-  - Encourage the user to join our communities or various social platforms to either get help from us or meet people in similar situations as them, and give them a place to connect.
-
-![Image of the 'How We Help' section Sherpa Finder](assets/docs/how-we-help-image.png)
-
-### Sign Up
-  - This section allows the user to get involved and sign up to get help and join our Sherpas in getting to know, learning and doing the raids in a safe environment.
-  - The user will be able to specify which type of day suits them the best, and let us know which raid or raids they are interested in doing with us.
-
-![Image of the Sign Up Form on Sherpa Finder](assets/docs/signup-form-image.jpg)
-
-### Footer
-  - Has social media icons with relevant links re-directing users to our social media platforms and encourages them to interact with us.
-
-![Image of the Footer on Sherpa Finder](assets/docs/footer-image.png)
+![Image of the Final Score page on Gaming Quiz](assets/docs/final-score-image.jpg)
 
 
 ### Future Implementations
 
-- Making the countdown actually count down on the page after the final question has been answered.
+- Making the countdown actually count down on the page after the final question has been answered instead of just a static text.
 - A more advanced scoring system.
 - Make it more obvious when you select the right or wrong answer, whether it be some minor animation or sound effect.
 
@@ -86,19 +63,6 @@ I've tried to make the website as accessible as possible where I could by:
 
 - Using semantic HTML.
 - Colors that are easy on the eye at any time of day.
-
-
-## Typography
-
-Google Fonts was used for these fonts:
-
-- **Rajdhani** for all website headings.
-
-![Image of the Rajdhani font](assets/docs/rajdhani-font.png)
-
-- **Antic** for all website body text / paragraphs and the navigation bar.
-
-![Image of the Antic font](assets/docs/antic-font.png)
 
 
 ## Technologies Used
@@ -113,6 +77,8 @@ HTML, CSS and JS was used when making this website.
 
 - GitHub - To save and store the files.
 
+- Visual Studio Code on Gitpod - My choice of IDE
+
 - Google Fonts - To find and import fonts used for the website.
 
 - Microsoft Edge Developer Tools - To troubleshoot, test features see and solve responsiveness, also to try get an understand why or how things were working, especially logging things to the console to see if things are doing or working the way they should.
@@ -125,7 +91,7 @@ HTML, CSS and JS was used when making this website.
 Github Pages was used to deploy the website. The instructions to do this can be found below:
 
 1. Log in or sign up to Github.
-2. Find the repository for this project, [p1-sherpa-finder](https://github.com/Hakesh/p1-sherpa-finder).
+2. Find the repository for this project, [p2-gaming-quiz](https://github.com/Hakesh/p2-gaming-quiz).
 3. Click on the "Settings" button in the menu bar for the repository.
 4. Click on Pages in the left hand side navigation bar.
 5. From the Source dropdown menu, select "Deploy from a branch".
@@ -140,36 +106,40 @@ This website was developed using Microsft Edge with the use of Microsoft Edge De
 
 The website has also been tested in Google Chrome and it works as expected.
 
+The lighthouse score perfect this time around.
+
 My biggest hurdle was getting the name requirement to work without a form, it took a fair bit of trial and error and researching to get it to work in an okay way. I wanted to get/make a similar warning/alert that you get as if you were using the "required" attribute in a form, however not enough time was available to research this option.
 
-The lighthouse score is good but not perfect. In the future I will look to try to use the .webp image format instead for better performance.
+
 
 ### Validator Testing
 
 - HTML
-  - No errors were returned when passing through the official [W3C Validator.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhakesh.github.io%2Fp1-sherpa-finder%2Findex.html)
+  - No errors were returned when passing through the official [W3C Validator.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhakesh.github.io%2Fp2-gaming-quiz%2F)
 
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) Validator.](https://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=https%3A%2F%2Fhakesh.github.io%2Fp1-sherpa-finder%2Findex.html&usermedium=all&vextwarning=&warning=1)
+  - No errors were found when passing through the official [(Jigsaw) Validator.](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhakesh.github.io%2Fp2-gaming-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 - JS
-  - No errors were returned when passing through the official [W3C Validator.](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhakesh.github.io%2Fp1-sherpa-finder%2Findex.html)
+  - No errors were returned when passing the JS code through Jshint, only warnings (though not sure what most of them entail). [Jshint](https://jshint.com/)
+  - Jshint Image link: https://i.imgur.com/Bh4y2z8.png 
 
 
 ### Lighthouse Testing
 
-![Image of Sherpa Finder Lighthouse Score](assets/docs/lighthouse-score-image.png)
+![Image of Gaming Quiz Lighthouse Score](assets/docs/lighthouse-score-image.png)
 
 ### Unfixed Bugs
 
 - If you spam click the correct answer you are able to get an unlimited amount of points/score.
+- For whatever reason the general quiz body is smaller on the live version, compared to the one designed on the IDE
 
 
 ## Credits
 
 - [Web Dev Simplified](https://www.youtube.com/watch?v=riDzcEQbX6k)
-  - Another one of his videos coming to my rescue. Wouldn't have been able to finish this project in time if it wasn't for him. A large amount of JS code is credited to him as the quiz game is based on his own, with other features implemented by me (score count, end screen, name requirement, etc). 
-  I only had 1.5-2 days of time on this project and wasn't able to figure out a solution by myself.
+  - Another one of his videos coming to my rescue. Wouldn't have been able to finish this project in time if it wasn't for him. A large amount of JS code is credited to him as the quiz game is based on his own, with other features being implemented by me (score count, end screen, name requirement, etc). 
+  I only had 1.5-2 days of time on this project and wasn't able to figure out a solution by myself in time. Huge huge props to this guy.
 
 - [Code Institute Template](https://github.com/Code-Institute-Org/gitpod-full-template)
   - My repository was created using the GitPod template given by Code Institute.

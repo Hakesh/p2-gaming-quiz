@@ -2,7 +2,7 @@ const startButton = document.getElementById("start-button");
 const nextButton = document.getElementById("next-button");
 const resetButton = document.getElementById("reset-button");
 const quizIntro = document.getElementById("quiz-intro");
-const quizContainerElement = document.getElementById("quiz-container")
+const quizContainerElement = document.getElementById("quiz-container");
 const userInfo = document.getElementById("user-info");
 
 const questionElement = document.getElementById("quiz-questions");
@@ -40,7 +40,7 @@ resetButton.addEventListener("click", resetGame);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     nextQuestion();
-})
+});
 
 
 /**
@@ -107,7 +107,7 @@ function showQuestion(question) {
         }
         button.addEventListener("click", selectAnswer);
         quizButtonsElement.appendChild(button);
-    })
+    });
 
 }
 
@@ -125,7 +125,7 @@ function selectAnswer(e) {
     setStatusClass(document.body, correct);
     Array.from(quizButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
-    })
+    });
 
     if(selectedButton.dataset.correct) {
         incrementScore();
@@ -319,4 +319,4 @@ const questions = [
             { text: "Facebook Live", correct: false }
         ]
     }
-]
+];

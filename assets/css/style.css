@@ -61,7 +61,7 @@ html {
 }
 
 
-#name-input {
+#player-name {
     width: 45%;
     height: 30px;
     margin-bottom: 60px;
@@ -89,7 +89,7 @@ html {
     font-size: 130%;
 }
 
-#name-input:hover {
+#player-name:hover {
     border: 3px solid rgb(68, 147, 179);
 }
 
@@ -110,14 +110,10 @@ html {
 }
 
 .button-grid {
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column; */
-
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 20px;
-    margin: 40px auto;
+
+    margin: 40px 0;
 }
 
 .quiz-button {

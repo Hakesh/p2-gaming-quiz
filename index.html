@@ -18,8 +18,7 @@
             <h2 id="intro-title">Welcome to the Gaming Quiz</h2>
             <p id="intro-text"2>Please enter your username so we can proceed with starting the Quiz</p>
 
-            <input id="name-input" type="text" placeholder="Name" maxlength="12" min="3">
-            <!-- <button id="start-button" class="control-buttons">Start</button> -->
+            <input id="player-name" type="text" placeholder="Name" maxlength="12" min="3">
 
         </div>
 
@@ -38,13 +37,18 @@
 
         <div id="user-info" class="hide">
             <p id="username">Username</p>
-            <p class="scores">Points: <span class="id">0</span>/12</p>
+            <p class="scores">Score: <span id="score">0</span>/12</p>
         </div>
 
         <div class="controls">
             <button id="start-button" class="control-buttons">Start</button>
             <button id="next-button" class="control-buttons hide">Next</button>
         </div>
+    </div>
+
+    <div id="end-screen" class="hide">
+        <p>Thanks for playing!</p>
+        <p>Your score: <span id="final-score"></span></p>
     </div>
 
 

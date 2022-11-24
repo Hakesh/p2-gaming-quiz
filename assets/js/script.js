@@ -7,8 +7,7 @@ const userInfo = document.getElementById("user-info");
 const questionElement = document.getElementById("quiz-questions");
 const quizButtonsElement = document.getElementById("answer-buttons");
 
-let inputName = document.getElementById("name-input");
-let username = document.getElementById("username");
+let playerName = document.getElementById("player-name");
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", runGame);
@@ -18,12 +17,14 @@ nextButton.addEventListener("click", () => {
 })
 
 function runGame() {
+    resetScore();
     quizIntro.classList.add("hide");
     startButton.classList.add("hide");
 
-    username.innerText = inputName.value
+    document.getElementById("username").innerText = playerName.value;
     userInfo.classList.remove("hide");
     console.log(username);
+    console.log(playerName.value)
 
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
@@ -68,6 +69,10 @@ function selectAnswer(e) {
     Array.from(quizButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     })
+    
+    if(selectedButton.dataset.correct) {
+        incrementScore();
+    }
 
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         console.log("Check question length");
@@ -85,7 +90,6 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element);
     if (correct) {
-        incrementScore();
         element.classList.add("correct");
     }
     else {
@@ -107,7 +111,39 @@ function incrementScore() {
 
 }
 
+function resetScore() {
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = "0";
+}
+
 const questions = [
+    {
+        question: "Which MMORPG boasted a massive 12 million players during 2009-2010?",
+        answers: [
+            { text: "Runescape", correct: false },
+            { text: "DOTA", correct: false },
+            { text: "World of Warcraft", correct: true },
+            { text: "League of Legends", correct: false }
+        ]
+    },
+    {
+        question: "Whats the name of the main protaganist in the legendary Halo franchise?",
+        answers: [
+            { text: "John Halo", correct: false },
+            { text: "Master Cheeks", correct: false },
+            { text: "Captain Price", correct: false },
+            { text: "Master Chief", correct: true }
+        ]
+    },
+    {
+        question: "What is the most played game of all time?",
+        answers: [
+            { text: "Minecraft", correct: false },
+            { text: "Candy Crush Saga", correct: true },
+            { text: "Fortnite", correct: false },
+            { text: "Grand Theft Auto", correct: false }
+        ]
+    },
     {
         question: "Zug Zug?",
         answers: [
@@ -115,6 +151,15 @@ const questions = [
             { text: "Yes", correct: false },
             { text: "No?", correct: false },
             { text: "???", correct: false }
+        ]
+    },
+    {
+        question: "What publisher owns the well-known game 'Call of Duty'?",
+        answers: [
+            { text: "Microsoft", correct: false },
+            { text: "Activision", correct: true },
+            { text: "Sony", correct: false },
+            { text: "Tencent", correct: false }
         ]
     }
 ]

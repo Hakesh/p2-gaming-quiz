@@ -1,8 +1,10 @@
 const startButton = document.getElementById("start-button");
 const nextButton = document.getElementById("next-button");
+const resetButton = document.getElementById("reset-button");
 const quizIntro = document.getElementById("quiz-intro");
 const quizContainerElement = document.getElementById("quiz-container")
 const userInfo = document.getElementById("user-info");
+
 
 const questionElement = document.getElementById("quiz-questions");
 const quizButtonsElement = document.getElementById("answer-buttons");
@@ -11,6 +13,7 @@ let playerName = document.getElementById("player-name");
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", runGame);
+resetButton.addEventListener("click", resetGame);
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     nextQuestion();
@@ -69,7 +72,7 @@ function selectAnswer(e) {
     Array.from(quizButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct);
     })
-    
+
     if(selectedButton.dataset.correct) {
         incrementScore();
     }
@@ -80,10 +83,10 @@ function selectAnswer(e) {
     }
     else {
         console.log("ran out of questions");
-        startButton.innerText = "Restart";
-        startButton.classList.remove("hide");
+        // startButton.innerText = "Restart";
+        // startButton.classList.remove("hide");
+        resetButton.classList.remove("hide");
     }
-
 }
 
 
@@ -116,9 +119,21 @@ function resetScore() {
     document.getElementById("score").innerText = "0";
 }
 
+function resetGame() {
+    quizIntro.classList.remove("hide");
+    quizContainerElement.classList.add("hide");
+    userInfo.classList.add("hide");
+    resetButton.classList.add("hide");
+    startButton.classList.remove("hide")
+}
+
+
+
+
+
 const questions = [
     {
-        question: "Which MMORPG boasted a massive 12 million players during 2009-2010?",
+        question: "Which MMORPG boasted a massive 12 million players during the years 2009-2010?",
         answers: [
             { text: "Runescape", correct: false },
             { text: "DOTA", correct: false },
